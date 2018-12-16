@@ -10,12 +10,15 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>ls-java-core</module>
+        <module>ls-mybatis-plus</module>
+        <module>ls-common-jar</module>
+        <module>ls-springboot2</module>
     </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.3.RELEASE</version>
+        <version>2.0.4.RELEASE</version>
         <relativePath/>
     </parent>
 
