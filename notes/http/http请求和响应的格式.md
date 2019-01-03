@@ -24,7 +24,7 @@ HTTP请求报文主要由请求行、请求头部、空行、请求正文四部�
 最常见的一种请求方式，当客户端要从服务器中读取文档时，当点击网页上的链接或者通过在浏览器的地址栏输入网址来浏览网页的，使用的都是GET方式。GET方法要求服务器将URL定位的资源放在响应报文的数据部分，回送给客户端。使用GET方法时，请求参数和对应的值附加在URL后面，利用一个问号（“?”）代表URL的结尾与请求参数的开始，传递参数长度受限制。例如，/index.jsp?id=100&op=bind,这样通过GET方式传递的数据直接表示在地址中，所以我们可以把请求结果以链接的形式发送给好友。以用google搜索domety为例，Request格式如下：
 
 GET /search?hl=zh-CN&source=hp&q=domety&aq=f&oq= HTTP/1.1  
-Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, application/vnd.ms-excel, application/vnd.ms-powerpoint, 
+Accept: image/gif, image/x-xbitmap, image/jpg, image/pjpg, application/vnd.ms-excel, application/vnd.ms-powerpoint, 
 application/msword, application/x-silverlight, application/x-shockwave-flash, */*  
 Referer: <a href="http://www.google.cn/">http://www.google.cn/</a>  
 Accept-Language: zh-cn  
@@ -44,7 +44,7 @@ FxlRugatx63JLv7CWMD6UB_O_r
 2）、POST
 对于上面提到的不适合使用GET方式的情况，可以考虑使用POST方式，因为使用POST方法可以允许客户端给服务器提供信息较多。POST方法将请求参数封装在HTTP请求数据中，以名称/值的形式出现，可以传输大量数据，这样POST方式对传送的数据大小没有限制，而且也不会显示在URL中。还以上面的搜索domety为例，如果使用POST方式的话，格式如下：
 POST /search HTTP/1.1  
-Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, application/vnd.ms-excel, application/vnd.ms-powerpoint, 
+Accept: image/gif, image/x-xbitmap, image/jpg, image/pjpg, application/vnd.ms-excel, application/vnd.ms-powerpoint, 
 application/msword, application/x-silverlight, application/x-shockwave-flash, */*  
 Referer: <a href="http://www.google.cn/">http://www.google.cn/</a>  
 Accept-Language: zh-cn  

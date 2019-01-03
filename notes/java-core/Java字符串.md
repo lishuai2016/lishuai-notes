@@ -1,0 +1,1 @@
+[参考](https://mccxj.github.io/blog/20130615_java-string-constant-pool.html)

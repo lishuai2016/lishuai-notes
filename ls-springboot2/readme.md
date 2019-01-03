@@ -238,8 +238,68 @@ springboot2.0.4的spring-boot-starter-log4j2加载不了？
             <artifactId>spring-boot-starter-log4j2</artifactId>
         </dependency>
 
+###5、级别控制
+在Spring Boot中只需要在application.properties中进行配置完成日志记录的级别控制。
+
+配置格式：logging.level.*=LEVEL
+
+logging.level：日志级别控制前缀，*为包名或Logger名
+LEVEL：选项TRACE, DEBUG, INFO, WARN, ERROR, FATAL, OFF
+举例：
+logging.level.com.ls=DEBUG：com.ls包下所有class以DEBUG级别输出
+logging.level.root=WARN：root日志以WARN级别输出
+### 6、自定义日志配置
+由于日志服务一般都在ApplicationContext创建前就初始化了，它并不是必须通过Spring的配置文件控制。
+因此通过系统属性和传统的Spring Boot外部配置文件依然可以很好的支持日志控制和管理。
+
+根据不同的日志系统，你可以按如下规则组织配置文件名，就能被正确加载：
+Logback：logback-spring.xml, logback-spring.groovy, logback.xml, logback.groovy
+Log4j：log4j-spring.properties, log4j-spring.xml, log4j.properties, log4j.xml
+Log4j2：log4j2-spring.xml, log4j2.xml
+JDK (Java Util Logging)：logging.properties
+Spring Boot官方推荐优先使用带有-spring的文件名作为你的日志配置（如使用logback-spring.xml，而不是logback.xml）
+
+### 7、自定义输出格式
+在Spring Boot中可以通过在application.properties配置如下参数控制输出格式：
+logging.pattern.console：定义输出到控制台的样式（不支持JDK Logger）
+logging.pattern.file：定义输出到文件的样式（不支持JDK Logger）
 
 
+默认情况下，SpringBoot只会在控制台输出 INFO及以上级别（WARN、ERROR）的日志。
+如果你想输出 DEBUG级别的日志，可以通过以下两种方法：
+1、在运行SpringBoot应用 jar包时指定 --debug参数：
+java -jar myApp.jar --debug
+2、在你的 application.properties中添加 debug=true（好像不好使）
+
+
+log4j2设置
+1、使用xml格式配置日志相关信息
+在根目录下创建一个log4j2-spring.xml
+2、使用properties配置
+需要放在主配置文件中否则不起作用
+
+
+调整各系统日志级别
+所有支持 logging的系统（框架）都可以在application.properties中设置一个不同的日志级别：
+logging.level.root=WARN
+logging.level.org.springframework.web=DEBUG
+logging.level.org.hibernate=ERROR
+
+
+#OFF、FATAL、ERROR、WARN、INFO、DEBUG、TRACE、ALL
+ %p 输出优先级，即 DEBUG ， INFO ， WARN ， ERROR ， FATAL
+　　 %r 输出自应用启动到输出该 log 信息耗费的毫秒数
+　　 %c 输出所属的类目，通常就是所在类的全名
+　　 %t 输出产生该日志事件的线程名
+　　 %n 输出一个回车换行符， Windows 平台为 “rn” ， Unix 平台为 “n”
+　　 %d 输出日志时间点的日期或时间，默认格式为 ISO8601 ，也可以在其后指定格式，比如： %d{yyy MMM dd HH:mm:ss,SSS} ，输出类似： 2002 年 10 月 18 日 22 ： 10 ： 28 ， 921
+　　 %l 输出日志事件的发生位置，包括类目名、发生的线程，以及在代码中的行数。举例：Testlog4.main(TestLog4.java:10)
+
+
+
+
+### 在当前项目环境输出日志信息,如下所示，会输出com.ls.data.service包下类的logger信息
+log4j.logger.com.ls.data.service=DEBUG   
 
 ## 15、springboot-15-kafka
 消息队列kafka
@@ -534,6 +594,13 @@ i的值越小，优先级越高。假设我们还有一个切面是CheckNameAspe
 
 ## 29、springboot-29-elasticsearch
 spring-boot-starter-data-elasticsearch  maven依赖不了？？？
+
+https://www.elastic.co/cn/downloads/elasticsearch
+
+https://www.cnblogs.com/xuwujing/p/8998168.html
+
+
+https://github.com/lishuai2016/elasticsearch
 
 
 ## 30、springboot-30-websocket

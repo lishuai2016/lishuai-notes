@@ -155,7 +155,7 @@ standEngine, StandHost, StandContext及StandWrapper是容器，他们之间有�
 - Adapter是处理HTTP请求对象，它就是从StandEngine的valve一直调用到StandWrapper的valve
 
 详细情况如图所示：
- <div align="center"> <img src="../../pics/Tomcat结构8URL.jpeg"/> </div><br>
+ <div align="center"> <img src="../../pics/Tomcat结构8URL.jpg"/> </div><br>
 
 -  Wrapper封装了具体的访问资源，例如 index.html
 - Context 封装了各个wrapper资源的集合，例如 app
@@ -260,7 +260,7 @@ valve机制是tomcat非常重要的处理逻辑的机制，会在相关文档里
 tomcat代码看似很庞大，但从结构上看却很清晰和简单，它主要由一堆组件组成，如Server、Service、Connector等，并基于JMX管理这些组件，
 另外实现以上接口的组件也实现了代表生存期的接口Lifecycle，使其组件履行固定的生存期，在其整个生存期的过程中通过事件侦听LifecycleEvent实现扩展。
 Tomcat的核心类图如下所示：
-<div align="center"> <img src="../../pics/Tomcat结构9.jpeg"/> </div><br>
+<div align="center"> <img src="../../pics/Tomcat结构9.jpg"/> </div><br>
 
 Catalina：与开始/关闭shell脚本交互的主类，因此如果要研究启动和关闭的过程，就从这个类开始看起。
 Server：是整个Tomcat组件的容器，包含一个或多个Service。
@@ -277,7 +277,7 @@ Loader：是被Container用来载入各种所需的Class。
 Manager：是被Container用来管理Session池。
 Realm：是用来处理安全里授权与认证。
 分析完核心类后，再看看Tomcat启动的过程，Tomcat启动的时序图如下所示：
-<div align="center"> <img src="../../pics/Tomcat结构10.jpeg"/> </div><br>
+<div align="center"> <img src="../../pics/Tomcat结构10.jpg"/> </div><br>
 
 从上图可以看出，Tomcat启动分为init和start两个过程，核心组件都实现了Lifecycle接口，都需实现start方法，
 因此在start过程中就是从Server开始逐层调用子组件的start过程。[模板方法？？？]

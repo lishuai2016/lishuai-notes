@@ -46,6 +46,10 @@
         <module>springboot-29-elasticsearch</module>
         <module>springboot-30-websocket</module>
         <module>springboot-31-webflux</module>
+        <module>springboot-32-jvm</module>
+        <module>springboot-33-JMH</module>
+        <module>springboot-34-markdown</module>
+
 
     </modules>
 

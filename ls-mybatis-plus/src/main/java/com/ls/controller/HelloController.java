@@ -1,6 +1,6 @@
 package com.ls.controller;
 
-import com.ls.common.ComponentBean;
+
 import com.ls.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -15,17 +15,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-//    @Autowired
-//    private UserMapper userMapper;
-
     @Autowired
-    private ComponentBean componentBean;
+    private UserMapper userMapper;
+
+
 
     @Value("${ls.name}")
     private String name;
 
     @GetMapping("/")
     public Object index() {
-        return "name:"+name+componentBean.getName();
+        return "name:"+name+userMapper.selectList(null);
     }
 }
