@@ -3,7 +3,7 @@ package com.ls.design_pattern.ChainOfResponsibility;
 /**
  * @program: lishuai-notes
  * @author: lishuai
- * @create: 2018-12-04 09:38
+ * @create: 2018-12-04
  */
 public class Client {
     public static void main(String[] args) {

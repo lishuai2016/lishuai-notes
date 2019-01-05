@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * @program: db-parser-component
  * @author: lishuai
- * @create: 2018-12-04 17:29
+ * @create: 2018-12-04
  */
 public class Table {
     public String tableName;

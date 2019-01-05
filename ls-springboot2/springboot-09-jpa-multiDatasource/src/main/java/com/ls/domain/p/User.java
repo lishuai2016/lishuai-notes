@@ -5,7 +5,7 @@ import javax.persistence.*;
 /**
  * @program: lishuai-notes
  * @author: lishuai
- * @create: 2018-12-15 18:21
+ * @create: 2018-12-15
  */
 @Entity
 public class User {

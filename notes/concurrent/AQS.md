@@ -23,6 +23,8 @@ public class Test_ReentrantLock {
 那么AQS的全称是什么呢？AbstractQueuedSynchronizer，抽象队列同步器。给大家画一个图先，看一下ReentrantLock和AQS之间的关系。
 <div align="center"> <img src="../../pics/ReentrantLock和AQS.png"/> </div><br>
 
+![ReentrantLock和AQS](../../pics/ReentrantLock和AQS.png)
+
 我们来看上面的图。说白了，ReentrantLock内部包含了一个AQS对象，也就是AbstractQueuedSynchronizer类型的对象。
 这个AQS对象就是ReentrantLock可以实现加锁和释放锁的关键性的核心组件。
 
@@ -33,10 +35,14 @@ public class Test_ReentrantLock {
 另外，这个AQS内部还有一个关键变量，用来记录当前加锁的是哪个线程，初始化状态下，这个变量是null。
 <div align="center"> <img src="../../pics/AQS1.png"/> </div><br>
 
+![AQS1](../../pics/AQS1.png)
+
 接着线程1跑过来调用ReentrantLock的lock()方法尝试进行加锁，这个加锁的过程，直接就是用CAS操作将state值从0变为1。
 如果之前没人加过锁，那么state的值肯定是0，此时线程1就可以加锁成功。
 一旦线程1加锁成功了之后，就可以设置当前加锁线程是自己。所以大家看下面的图，就是线程1跑过来加锁的一个过程。
 <div align="center"> <img src="../../pics/AQS2.png"/> </div><br>
+
+![AQS2](../../pics/AQS2.png)
 
 其实看到这儿，大家应该对所谓的AQS有感觉了。说白了，就是并发包里的一个核心组件，里面有state变量、加锁线程变量等核心的东西，维护了加锁状态。
 你会发现，ReentrantLock这种东西只是一个外层的API，内核中的锁机制实现都是依赖AQS组件的。

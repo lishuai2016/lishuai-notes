@@ -5,7 +5,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * @program: lishuai-notes
  * @author: lishuai
- * @create: 2018-12-08 19:28
+ * @create: 2018-12-08
  */
 public class Test_atomic {
 

@@ -3,7 +3,7 @@ package com.ls.design_pattern.ChainOfResponsibility;
 /**
  * @program: lishuai-notes
  * @author: lishuai
- * @create: 2018-12-04 09:26
+ * @create: 2018-12-04
  */
 public class Request {
     private RequestType type;

@@ -10,7 +10,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 /**
  * @program: lishuai-notes
  * @author: lishuai
- * @create: 2018-12-16 21:15
  *
 2018-12-16 21:17:40.336  INFO 1940 --- [ taskExecutor-1] com.ls.asyncThreadPool.TaskThreadPool    : 开始做任务一
 2018-12-16 21:17:40.337  INFO 1940 --- [ taskExecutor-2] com.ls.asyncThreadPool.TaskThreadPool    : 开始做任务二

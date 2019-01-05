@@ -3,7 +3,7 @@ package com.ls.leetcode;
 /**
  * @program: lishuai-notes
  * @author: lishuai
- * @create: 2018-12-02 23:15
+ * @create: 2018-12-02
 
 https://leetcode.com/problems/container-with-most-water/
 

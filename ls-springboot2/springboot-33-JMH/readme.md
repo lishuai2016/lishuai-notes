@@ -43,7 +43,7 @@ Java的基准测试需要注意的几个点：
 /**
  * @program: lishuai-notes
  * @author: lishuai
- * @create: 2018-12-23 19:07
+ * @create: 2018-12-23 
  * 比较字符串直接相加和StringBuilder的效率
  */
 @BenchmarkMode(Mode.Throughput)

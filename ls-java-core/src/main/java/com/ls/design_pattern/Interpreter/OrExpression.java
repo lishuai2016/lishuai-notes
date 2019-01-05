@@ -3,7 +3,7 @@ package com.ls.design_pattern.Interpreter;
 /**
  * @program: lishuai-notes
  * @author: lishuai
- * @create: 2018-12-04 11:14
+ * @create: 2018-12-04
  */
 public class OrExpression extends Expression {
     private Expression expression1 = null;

@@ -3,7 +3,7 @@ package com.ls.model;
 /**
  * @program: db-parser-component
  * @author: lishuai
- * @create: 2018-12-04 19:50
+ * @create: 2018-12-04
  */
 public class TableColumns {
     public String tableName;

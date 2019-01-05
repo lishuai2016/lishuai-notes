@@ -7,7 +7,7 @@ import org.springframework.data.repository.query.Param;
 /**
  * @program: lishuai-notes
  * @author: lishuai
- * @create: 2018-12-15 17:12
+ * @create: 2018-12-15
  */
 public interface UserRepository extends JpaRepository<User, Long> {
 

@@ -3,7 +3,7 @@ package com.ls.design_pattern.ChainOfResponsibility;
 /**
  * @program: lishuai-notes
  * @author: lishuai
- * @create: 2018-12-04 09:29
+ * @create: 2018-12-04
  * Handler：定义处理请求的接口，并且实现后继链（successor）
  */
 public abstract class Handler {

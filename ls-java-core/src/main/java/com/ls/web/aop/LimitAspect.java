@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 /**
  * @program: lishuai-notes
  * @author: lishuai
- * @create: 2018-12-09 16:28
+ * @create: 2018-12-09
  */
 @Component
 @Scope

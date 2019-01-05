@@ -3,7 +3,7 @@ package com.ls.concurrent;
 /**
  * @program: lishuai-notes
  * @author: lishuai
- * @create: 2018-12-08 19:15
+ * @create: 2018-12-08
  */
 public class Test_synchrinized_increment {
     public  int data=0;

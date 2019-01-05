@@ -3,7 +3,7 @@ package com.ls.design_pattern.singleton;
 /**
  * @program: lishuai-notes
  * @author: lishuai
- * @create: 2018-12-03 14:07
+ * @create: 2018-12-03
  */
 public class Singleton_safe_synchronized {
     private Singleton_safe_synchronized() {

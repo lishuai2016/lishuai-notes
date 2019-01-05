@@ -5,7 +5,7 @@ import java.util.StringTokenizer;
 /**
  * @program: lishuai-notes
  * @author: lishuai
- * @create: 2018-12-04 10:06
+ * @create: 2018-12-04
  */
 public class TerminalExpression extends Expression {
     private String literal;

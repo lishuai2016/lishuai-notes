@@ -10,7 +10,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 /**
  * @program: lishuai-notes
  * @author: lishuai
- * @create: 2018-12-17 09:48
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest

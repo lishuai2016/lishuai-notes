@@ -7,7 +7,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 /**
  * @program: lishuai-notes
  * @author: lishuai
- * @create: 2018-12-16 20:44
+ * @create: 2018-12-16
  */
 @SpringBootApplication
 @EnableAsync

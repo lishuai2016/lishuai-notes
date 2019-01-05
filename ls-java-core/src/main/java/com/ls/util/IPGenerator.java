@@ -3,7 +3,7 @@ package com.ls.util;
 /**
  * @program: lishuai-notes
  * @author: lishuai
- * @create: 2018-12-09 15:57
+ * @create: 2018-12-09
  */
 
 import org.slf4j.Logger;
@@ -18,7 +18,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * @program: db-parser-component
  * @author: lishuai
- * @create: 2018-12-05 11:54
+ * @create: 2018-12-05
  * 获取运行此程序的机器IP
  */
 public class IPGenerator {

@@ -3,7 +3,7 @@ package com.ls.design_pattern.SimpleFactory;
 /**
  * @program: lishuai-notes
  * @author: lishuai
- * @create: 2018-12-03 22:59
+ * @create: 2018-12-03
  */
 public class Client {
     public static void main(String[] args) {

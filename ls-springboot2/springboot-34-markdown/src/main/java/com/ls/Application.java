@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * @program: lishuai-notes
  * @author: lishuai
- * @create: 2018-12-15 10:06
+ * @create: 2018-12-15
  */
 @SpringBootApplication
 public class Application {

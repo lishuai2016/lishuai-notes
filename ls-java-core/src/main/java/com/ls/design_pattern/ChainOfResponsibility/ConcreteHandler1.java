@@ -3,7 +3,7 @@ package com.ls.design_pattern.ChainOfResponsibility;
 /**
  * @program: lishuai-notes
  * @author: lishuai
- * @create: 2018-12-04 09:33
+ * @create: 2018-12-04
  */
 public class ConcreteHandler1 extends Handler {
 

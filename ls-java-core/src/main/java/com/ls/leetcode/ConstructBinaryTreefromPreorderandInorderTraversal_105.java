@@ -3,7 +3,7 @@ package com.ls.leetcode;
 /**
  * @program: lishuai-notes
  * @author: lishuai
- * @create: 2018-12-02 23:46
+ * @create: 2018-12-02
  */
 
 /**

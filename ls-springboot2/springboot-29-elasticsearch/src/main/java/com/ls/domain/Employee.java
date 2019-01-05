@@ -7,7 +7,7 @@ import org.springframework.data.elasticsearch.annotations.Field;
 /**
  * @program: lishuai-notes
  * @author: lishuai
- * @create: 2018-12-21 18:06
+ * @create: 2018-12-21
  */
 @Document(indexName = "megacorp",type = "employee", shards = 1,replicas = 0, refreshInterval = "-1")
 public class Employee {

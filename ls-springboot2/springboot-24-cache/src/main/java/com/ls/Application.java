@@ -7,7 +7,7 @@ import org.springframework.cache.annotation.EnableCaching;
 /**
  * @program: lishuai-notes
  * @author: lishuai
- * @create: 2018-12-16 15:06
+ * @create: 2018-12-16
  */
 @SpringBootApplication
 @EnableCaching

@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * @program: db-parser-component
  * @author: lishuai
- * @create: 2018-12-04 17:23
+ * @create: 2018-12-04
  * MySQL和memsql通用
  * 他们的服务器都存有表元数据信息的数据库information_schema，
  * 通过该库下的表tables获取表相关信息；通过columns获取一张表的结构信息

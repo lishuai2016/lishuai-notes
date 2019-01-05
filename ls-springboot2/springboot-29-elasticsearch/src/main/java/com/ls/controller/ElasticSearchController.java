@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * @program: lishuai-notes
  * @author: lishuai
- * @create: 2018-12-21 18:07
+ * @create: 2018-12-21
  */
 @RestController
 @RequestMapping("/es")

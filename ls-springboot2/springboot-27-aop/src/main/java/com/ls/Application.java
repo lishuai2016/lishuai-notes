@@ -12,7 +12,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * @program: lishuai-notes
  * @author: lishuai
- * @create: 2018-12-16 21:54
  */
 @SpringBootApplication
 public class Application {

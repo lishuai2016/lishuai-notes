@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 /**
  * @program: lishuai-notes
  * @author: lishuai
- * @create: 2018-12-21 18:07
+ * @create: 2018-12-21
  */
 @Component
 public interface EmployeeRepository extends ElasticsearchRepository<Employee,String> {

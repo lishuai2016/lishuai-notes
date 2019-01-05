@@ -3,7 +3,7 @@ package com.ls.concurrent;
 /**
  * @program: lishuai-notes
  * @author: lishuai
- * @create: 2018-12-08 18:14
+ * @create: 2018-12-08
  */
 public class Test_volatile {
     private volatile int data=0;

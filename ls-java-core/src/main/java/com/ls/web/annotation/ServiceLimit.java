@@ -5,7 +5,7 @@ import java.lang.annotation.*;
 /**
  * @program: lishuai-notes
  * @author: lishuai
- * @create: 2018-12-09 16:27
+ * @create: 2018-12-09
  */
 @Target({ElementType.PARAMETER, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)

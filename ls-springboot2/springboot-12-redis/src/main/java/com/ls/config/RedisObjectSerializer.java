@@ -9,7 +9,7 @@ import org.springframework.data.redis.serializer.SerializationException;
 /**
  * @program: lishuai-notes
  * @author: lishuai
- * @create: 2018-12-16 12:51
+ * @create: 2018-12-16
  */
 public class RedisObjectSerializer implements RedisSerializer<Object> {
 

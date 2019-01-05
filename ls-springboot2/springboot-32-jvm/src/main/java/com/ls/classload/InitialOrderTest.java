@@ -3,7 +3,6 @@ package com.ls.classload;
 /**
  * @program: lishuai-notes
  * @author: lishuai
- * @create: 2018-12-27 09:34
  * 输出：
 第一种情况：主函数调用： new InitialOrderTest();
 静态变量

@@ -49,6 +49,7 @@
         <module>springboot-32-jvm</module>
         <module>springboot-33-JMH</module>
         <module>springboot-34-markdown</module>
+        <module>springboot-35-nutz</module>
 
 
     </modules>

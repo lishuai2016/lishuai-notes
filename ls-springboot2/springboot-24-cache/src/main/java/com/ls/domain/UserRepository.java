@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 /**
  * @program: lishuai-notes
  * @author: lishuai
- * @create: 2018-12-16 15:07
+ * @create: 2018-12-16
  */
 @CacheConfig(cacheNames = "users")
 public interface UserRepository extends JpaRepository<User, Long> {
