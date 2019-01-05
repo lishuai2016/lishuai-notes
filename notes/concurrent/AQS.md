@@ -21,9 +21,7 @@ public class Test_ReentrantLock {
 你这时可能会问，这个跟AQS有啥关系？关系大了去了！因为java并发包下很多API都是基于AQS来实现的加锁和释放锁等功能的，AQS是java并发包的基础类。
 举个例子，比如说ReentrantLock、ReentrantReadWriteLock底层都是基于AQS来实现的。
 那么AQS的全称是什么呢？AbstractQueuedSynchronizer，抽象队列同步器。给大家画一个图先，看一下ReentrantLock和AQS之间的关系。
-<div align="center"> <img src="../../pics/ReentrantLock和AQS.png"/> </div><br>
-
-![ReentrantLock和AQS](../../pics/ReentrantLock和AQS.png)
+![ReentrantLock和AQS](../../pics/ReentrantLock和AQS.png) 
 
 我们来看上面的图。说白了，ReentrantLock内部包含了一个AQS对象，也就是AbstractQueuedSynchronizer类型的对象。
 这个AQS对象就是ReentrantLock可以实现加锁和释放锁的关键性的核心组件。
@@ -33,15 +31,11 @@ public class Test_ReentrantLock {
 好了，那么现在如果有一个线程过来尝试用ReentrantLock的lock()方法进行加锁，会发生什么事情呢？
 很简单，这个AQS对象内部有一个核心的变量叫做state，是int类型的，代表了加锁的状态。初始状态下，这个state的值是0。
 另外，这个AQS内部还有一个关键变量，用来记录当前加锁的是哪个线程，初始化状态下，这个变量是null。
-<div align="center"> <img src="../../pics/AQS1.png"/> </div><br>
-
 ![AQS1](../../pics/AQS1.png)
 
 接着线程1跑过来调用ReentrantLock的lock()方法尝试进行加锁，这个加锁的过程，直接就是用CAS操作将state值从0变为1。
 如果之前没人加过锁，那么state的值肯定是0，此时线程1就可以加锁成功。
 一旦线程1加锁成功了之后，就可以设置当前加锁线程是自己。所以大家看下面的图，就是线程1跑过来加锁的一个过程。
-<div align="center"> <img src="../../pics/AQS2.png"/> </div><br>
-
 ![AQS2](../../pics/AQS2.png)
 
 其实看到这儿，大家应该对所谓的AQS有感觉了。说白了，就是并发包里的一个核心组件，里面有state变量、加锁线程变量等核心的东西，维护了加锁状态。
@@ -56,22 +50,23 @@ public class Test_ReentrantLock {
 说明已经有人加锁了！
 接着线程2会看一下，是不是自己之前加的锁啊？当然不是了，“加锁线程”这个变量明确记录了是线程1占用了这个锁，所以线程2此时就是加锁失败。
 给大家来一张图，一起来感受一下这个过程：
-<div align="center"> <img src="../../pics/AQS3.png"/> </div><br>
+![AQS3](../../pics/AQS3.png)
+
 接着，线程2会将自己放入AQS中的一个等待队列，因为自己尝试加锁失败了，此时就要将自己放入队列中来等待，等待线程1释放锁之后，自己就可以重新尝试加锁了
 所以大家可以看到，AQS是如此的核心！AQS内部还有一个等待队列，专门放那些加锁失败的线程！
 同样，给大家来一张图，一起感受一下：
-<div align="center"> <img src="../../pics/AQS4.png"/> </div><br>
+![AQS4](../../pics/AQS4.png)
 
 接着，线程1在执行完自己的业务逻辑代码之后，就会释放锁！他释放锁的过程非常的简单，就是将AQS内的state变量的值递减1，
 如果state值为0，则彻底释放锁，会将“加锁线程”变量也设置为null！
 整个过程，参见下图：
-<div align="center"> <img src="../../pics/AQS5.png"/> </div><br>
+![AQS5](../../pics/AQS5.png)
 
 接下来，会从等待队列的队头唤醒线程2重新尝试加锁。
 好！线程2现在就重新尝试加锁，这时还是用CAS操作将state从0变为1，此时就会成功，成功之后代表加锁成功，就会将state设置为1。
 此外，还要把“加锁线程”设置为线程2自己，同时线程2自己就从等待队列中出队了。
 最后再来一张图，大家来看看这个过程。
-<div align="center"> <img src="../../pics/AQS6.png"/> </div><br>
+![AQS6](../../pics/AQS6.png)
 
 ## 3、总结
 其实一句话总结AQS就是一个并发包的基础组件，用来实现各种锁，各种同步组件的。它包含了state变量、加锁线程、等待队列等并发中的核心组件。

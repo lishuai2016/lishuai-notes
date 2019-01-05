@@ -32,7 +32,7 @@ public class Test_synchrinized_increment {
 同一时间只有一个线程能加锁，其他线程需要等待锁。
 通过这样处理，就可以保证换个data每次都会累加1，不会出现数据错乱的问题。
 我们来看看下面的图，感受一下synchronized加锁下的效果和氛围，相当于N个线程一个一个的排队在更新那个数值。
-<div align="center"> <img src="../../pics/synchronized加锁.png"/> </div><br>
+![synchronized加锁](../../pics/synchronized加锁.png)
 
 但是，如此简单的data++操作，都要加一个重磅的synchronized锁来解决多线程并发问题，就有点杀鸡用牛刀，大材小用了。
 虽然随着Java版本更新，也对synchronized做了很多优化，但是处理这种简单的累加操作，仍然显得“太重了”。
