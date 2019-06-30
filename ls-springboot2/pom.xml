@@ -50,6 +50,12 @@
         <module>springboot-33-JMH</module>
         <module>springboot-34-markdown</module>
         <module>springboot-35-nutz</module>
+        <module>springboot-36-elastic-job-lite</module>
+        <module>springboot-36-elastic-job-lite-1</module>
+        <module>springboot-37-xxl-job</module>
+        <module>springboot-38-Sharding-JDBC</module>
+        <module>springboot-39-netty-socketio</module>
+        <module>springboot-40-hystrix</module>
 
 
     </modules>

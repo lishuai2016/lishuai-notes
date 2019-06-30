@@ -13,6 +13,12 @@
         <module>ls-mybatis-plus</module>
         <module>ls-common-jar</module>
         <module>ls-springboot2</module>
+        <module>ls-rpc</module>
+        <module>ls-netty-all</module>
+        <module>ls-seckill</module>
+        <module>ls-distributed-tx</module>
+        <module>ls-hadoop</module>
+        <module>ls-redis</module>
     </modules>
 
     <parent>

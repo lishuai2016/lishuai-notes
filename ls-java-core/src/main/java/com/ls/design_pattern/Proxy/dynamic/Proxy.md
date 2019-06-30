@@ -25,15 +25,15 @@ h:　　一个InvocationHandler对象，表示的是当我这个动态代理对�
 v1包的client类运行的结果分析：
 com.sun.proxy.$Proxy0
 before rent house
-Method:public abstract void com.ls.design_pattern.Proxy.dynamic.v1.Subject.rent()
+Method:public abstract void com.ls.design_pattern.Proxy.dynamic.jdk.Subject.rent()
 I want to rent my house
 after rent house
 before rent house
-Method:public abstract void com.ls.design_pattern.Proxy.dynamic.v1.Subject.hello(java.lang.String)
+Method:public abstract void com.ls.design_pattern.Proxy.dynamic.jdk.Subject.hello(java.lang.String)
 hello: world
 after rent house
 before rent house
-Method:public abstract java.lang.String com.ls.design_pattern.Proxy.dynamic.v1.Subject.re(java.lang.String)
+Method:public abstract java.lang.String com.ls.design_pattern.Proxy.dynamic.jdk.Subject.re(java.lang.String)
 after rent house
 1111111111111111111111111222222222222
 

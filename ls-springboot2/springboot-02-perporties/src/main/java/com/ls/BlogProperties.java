@@ -103,7 +103,7 @@ public class BlogProperties {
                 ", value='" + value + '\'' +
                 ", number=" + number +
                 ", bignumber=" + bignumber +
-                ", test1=" + test1 +
+                ", jdk=" + test1 +
                 ", test2=" + test2 +
                 '}';
     }
